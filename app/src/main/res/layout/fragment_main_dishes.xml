@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainDishesFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="Bánh mì"
+            android:textSize="30dp"
+            android:id="@+id/food1"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="Phở"
+            android:layout_below="@+id/food1"
+            android:layout_alignStart="@id/food1"
+            android:id="@+id/food2"/>
+        <Button
+            android:id="@+id/btnToSideDishes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/food2"
+            android:layout_alignStart="@+id/food2"
+            android:text="To side dishes"/>
+    </RelativeLayout>
+
+
+</FrameLayout>

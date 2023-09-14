@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DessertsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="Bánh mì 3"
+            android:textSize="30dp"
+            android:id="@+id/desserts1"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="Phở 3"
+            android:layout_below="@+id/desserts1"
+            android:layout_alignStart="@id/desserts1"
+            android:id="@+id/desserts2"/>
+        <Button
+            android:id="@+id/btnToDrink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/desserts2"
+            android:layout_alignStart="@+id/desserts2"
+            android:text="To drink"/>
+        <Button
+            android:id="@+id/btnBackToSideDishes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnToDrink"
+            android:layout_alignStart="@+id/btnToDrink"
+            android:text="Back"/>
+    </RelativeLayout>
+
+</FrameLayout>

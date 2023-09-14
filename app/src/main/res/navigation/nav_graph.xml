@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainDishesFragment">
+
+    <fragment
+        android:id="@+id/mainDishesFragment"
+        android:name="com.datnt.foodapp.MainDishesFragment"
+        android:label="fragment_main_dishes"
+        tools:layout="@layout/fragment_main_dishes" >
+        <action
+            android:id="@+id/action_mainDishesFragment_to_dessertsFragment"
+            app:destination="@id/dessertsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sideDishesFragment"
+        android:name="com.datnt.foodapp.SideDishesFragment"
+        android:label="fragment_side_dishes"
+        tools:layout="@layout/fragment_side_dishes" >
+        <action
+            android:id="@+id/action_sideDishesFragment_to_listFood"
+            app:destination="@id/listFood" />
+        <action
+            android:id="@+id/action_sideDishesFragment_to_drinksFragment"
+            app:destination="@id/drinksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dessertsFragment"
+        android:name="com.datnt.foodapp.DessertsFragment"
+        android:label="fragment_desserts"
+        tools:layout="@layout/fragment_desserts" >
+        <action
+            android:id="@+id/action_dessertsFragment_to_drinksFragment"
+            app:destination="@id/drinksFragment" />
+        <action
+            android:id="@+id/action_dessertsFragment_to_mainDishesFragment"
+            app:destination="@id/mainDishesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/drinksFragment"
+        android:name="com.datnt.foodapp.DrinksFragment"
+        android:label="fragment_drinks"
+        tools:layout="@layout/fragment_drinks" >
+        <action
+            android:id="@+id/action_drinksFragment_to_sideDishesFragment"
+            app:destination="@id/sideDishesFragment" />
+        <action
+            android:id="@+id/action_drinksFragment_to_dessertsFragment"
+            app:destination="@id/dessertsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFood"
+        android:name="com.datnt.foodapp.ListFood"
+        android:label="fragment_list_food"
+        tools:layout="@layout/fragment_list_food" >
+        <action
+            android:id="@+id/action_listFood_to_sideDishesFragment"
+            app:destination="@id/sideDishesFragment" />
+    </fragment>
+</navigation>

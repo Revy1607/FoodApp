@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/MainDishes"
+        android:icon="@drawable/main"
+        android:title="Main dishes" />
+    <item
+        android:id="@+id/SideDishes"
+        android:icon="@drawable/main"
+        android:title="Side dishes" />
+    <item
+        android:id="@+id/Desserts"
+        android:icon="@drawable/cake"
+        android:title="Desserts" />
+    <item
+        android:id="@+id/Drinks"
+        android:icon="@drawable/poinsettia"
+        android:title="Drinks" />
+    <item
+        android:id="@+id/ListFood"
+        android:icon="@drawable/baseline_checklist_24"
+        android:title="List food" />
+</menu>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SideDishesFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="Bánh mì 2"
+            android:textSize="30dp"
+            android:id="@+id/secondFood1"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="Phở 2"
+            android:layout_below="@+id/secondFood1"
+            android:layout_alignStart="@id/secondFood1"
+            android:id="@+id/secondFood2"/>
+        <Button
+            android:id="@+id/btnToDessert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/secondFood2"
+            android:layout_alignStart="@+id/secondFood2"
+            android:text="To dessert"/>
+        <Button
+            android:id="@+id/btnBackToMainDishes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnToDessert"
+            android:layout_alignStart="@+id/btnToDessert"
+            android:text="Back"/>
+    </RelativeLayout>
+
+</FrameLayout>

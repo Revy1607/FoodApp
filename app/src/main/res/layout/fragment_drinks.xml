@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DrinksFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="Trà đá"
+            android:textSize="30dp"
+            android:id="@+id/drink1"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="Cà phê"
+            android:layout_below="@+id/drink1"
+            android:layout_alignStart="@id/drink1"
+            android:id="@+id/drink2"/>
+        <Button
+            android:id="@+id/btnToListFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/drink2"
+            android:layout_alignStart="@+id/drink2"
+            android:text="Show list food"/>
+        <Button
+            android:id="@+id/btnBackToDessert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnToListFood"
+            android:layout_alignStart="@+id/btnToListFood"
+            android:text="Back"/>
+    </RelativeLayout>
+
+</FrameLayout>
