@@ -11,8 +11,8 @@
         android:label="fragment_main_dishes"
         tools:layout="@layout/fragment_main_dishes" >
         <action
-            android:id="@+id/action_mainDishesFragment_to_dessertsFragment"
-            app:destination="@id/dessertsFragment" />
+            android:id="@+id/action_mainDishesFragment_to_sideDishesFragment"
+            app:destination="@id/sideDishesFragment" />
     </fragment>
     <fragment
         android:id="@+id/sideDishesFragment"
@@ -20,11 +20,11 @@
         android:label="fragment_side_dishes"
         tools:layout="@layout/fragment_side_dishes" >
         <action
-            android:id="@+id/action_sideDishesFragment_to_listFood"
-            app:destination="@id/listFood" />
+            android:id="@+id/action_sideDishesFragment_to_mainDishesFragment"
+            app:destination="@id/mainDishesFragment" />
         <action
-            android:id="@+id/action_sideDishesFragment_to_drinksFragment"
-            app:destination="@id/drinksFragment" />
+            android:id="@+id/action_sideDishesFragment_to_dessertsFragment"
+            app:destination="@id/dessertsFragment" />
     </fragment>
     <fragment
         android:id="@+id/dessertsFragment"
@@ -35,8 +35,8 @@
             android:id="@+id/action_dessertsFragment_to_drinksFragment"
             app:destination="@id/drinksFragment" />
         <action
-            android:id="@+id/action_dessertsFragment_to_mainDishesFragment"
-            app:destination="@id/mainDishesFragment" />
+            android:id="@+id/action_dessertsFragment_to_sideDishesFragment"
+            app:destination="@id/sideDishesFragment" />
     </fragment>
     <fragment
         android:id="@+id/drinksFragment"
@@ -44,8 +44,8 @@
         android:label="fragment_drinks"
         tools:layout="@layout/fragment_drinks" >
         <action
-            android:id="@+id/action_drinksFragment_to_sideDishesFragment"
-            app:destination="@id/sideDishesFragment" />
+            android:id="@+id/action_drinksFragment_to_listFood"
+            app:destination="@id/listFood" />
         <action
             android:id="@+id/action_drinksFragment_to_dessertsFragment"
             app:destination="@id/dessertsFragment" />
@@ -56,7 +56,7 @@
         android:label="fragment_list_food"
         tools:layout="@layout/fragment_list_food" >
         <action
-            android:id="@+id/action_listFood_to_sideDishesFragment"
-            app:destination="@id/sideDishesFragment" />
+            android:id="@+id/action_listFood_to_drinksFragment"
+            app:destination="@id/drinksFragment" />
     </fragment>
 </navigation>

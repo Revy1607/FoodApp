@@ -5,14 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.CheckBox
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 
 
 class DessertsFragment : Fragment() {
     private var viewModel: FoodViewModel? = null
     private var checkBox1: CheckBox? = null
     private var checkBox2: CheckBox? = null
+    private var btnNext: Button? = null
+    private var btnBack: Button? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -28,6 +32,8 @@ class DessertsFragment : Fragment() {
 
         checkBox1 = view?.findViewById(R.id.desserts1)
         checkBox2 = view?.findViewById(R.id.desserts2)
+        btnNext = view?.findViewById(R.id.btnToDrink)
+        btnBack = view?.findViewById(R.id.btnBackToSideDishes)
 
         checkBox1?.setOnCheckedChangeListener { _, isChecked ->
             if(isChecked){
@@ -43,6 +49,14 @@ class DessertsFragment : Fragment() {
             }else{
                 viewModel?.removeSelectedFood("Phở 3")
             }
+        }
+
+        btnNext?.setOnClickListener {
+            findNavController().navigate(R.id.action_dessertsFragment_to_drinksFragment)
+        }
+
+        btnBack?.setOnClickListener {
+            findNavController().navigate(R.id.action_dessertsFragment_to_sideDishesFragment)
         }
         // Inflate the layout for this fragment
         return view
