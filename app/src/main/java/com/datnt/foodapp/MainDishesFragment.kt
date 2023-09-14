@@ -36,6 +36,14 @@ class MainDishesFragment : Fragment() {
             }
         }
 
+        checkBox2?.setOnCheckedChangeListener { _, isChecked ->
+            if(isChecked){
+                viewModel?.addSelectedFood("Phở")
+            }else{
+                viewModel?.removeSelectedFood("Phở")
+            }
+        }
+
         return view
     }
 
