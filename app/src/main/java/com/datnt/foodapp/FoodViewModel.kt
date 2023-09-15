@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 
 class FoodViewModel : ViewModel() {
     private val selectedFoods = MutableLiveData<List<String>>()
+    //sử dụng map để lưu trạng thái của checkbox
     private val checkBoxStates = mutableMapOf<Int, Boolean>()
 
     //xử lý sự kiện check box: không bị mất trạng thái khi chuyển sang màn khác
