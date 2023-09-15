@@ -16,7 +16,8 @@ import androidx.navigation.fragment.findNavController
 
 
 class ListFood : Fragment() {
-    private var viewModel: FoodViewModel? = null
+//    private var viewModel: FoodViewModel? = null
+    private lateinit var viewModel: FoodViewModel
     private var tv: TextView? = null
     private var btnBack: Button? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +36,7 @@ class ListFood : Fragment() {
         tv = view?.findViewById(R.id.tv)
         btnBack = view?.findViewById(R.id.btnBack)
 
-       viewModel?.getSelectedFoods()?.observe(viewLifecycleOwner, Observer { selectedFoods ->
+       viewModel.getSelectedFoods().observe(viewLifecycleOwner, Observer { selectedFoods ->
            tv?.text = selectedFoods.joinToString(", ")
        })
 

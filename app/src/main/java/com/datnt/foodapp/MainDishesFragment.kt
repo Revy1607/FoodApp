@@ -32,12 +32,18 @@ class MainDishesFragment : Fragment() {
         checkBox2 = view?.findViewById(R.id.food2)
         btnNext = view?.findViewById(R.id.btnToSideDishes)
 
+        // Lấy trạng thái từ ViewModel và đặt cho CheckBox
+        checkBox1?.isChecked = viewModel?.getCheckBoxState(R.id.food1) == true
+        checkBox2?.isChecked = viewModel?.getCheckBoxState(R.id.food2) == true
+
         checkBox1?.setOnCheckedChangeListener { _, isChecked ->
             if(isChecked){
                 viewModel?.addSelectedFood("Bánh mì")
             }else{
                 viewModel?.removeSelectedFood("Bánh mì")
             }
+            // Lưu trạng thái CheckBox vào ViewModel
+            viewModel?.setCheckBoxState(R.id.food1, isChecked)
         }
 
         checkBox2?.setOnCheckedChangeListener { _, isChecked ->
@@ -46,6 +52,7 @@ class MainDishesFragment : Fragment() {
             }else{
                 viewModel?.removeSelectedFood("Phở")
             }
+            viewModel?.setCheckBoxState(R.id.food2, isChecked)
         }
 
         btnNext?.setOnClickListener {
